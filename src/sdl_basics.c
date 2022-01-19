@@ -51,7 +51,7 @@ int main(int argc, char **args) {
             }
         }
         
-        int r = 150;//rand() % 256;
+        int r = 15;//rand() % 256;
         int g = 150;//rand() % 256;
         int b = 150;//rand() % 256;
         SDL_SetRenderDrawColor(renderer, r, g, b, 200);
@@ -64,7 +64,7 @@ int main(int argc, char **args) {
         float lastX = mouseX + cos(0) * radius;
         float lastY = mouseY + sin(0) * radius;
 
-        for (int a = 90; a <= 360; a += 90) {
+        for (int a = 0; a <= 360; a += 30) {
             float xx = mouseX + cos(a * PI / 180) * radius;
             float yy = mouseY + sin(a * PI / 180) * radius;
             SDL_RenderDrawLine(renderer, lastX, lastY, xx, yy);
